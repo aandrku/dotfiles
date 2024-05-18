@@ -38,6 +38,10 @@ lspconfig.lua_ls.setup {
 	}
 }
 
+lspconfig.tsserver.setup{}
+
+lspconfig.tailwindcss.setup{}
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -72,8 +76,8 @@ cmp.setup({
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-p>"] = cmp.mapping.select_prev_item(),
-		["<C-n>"] = cmp.mapping.select_next_item(),
+		["<C-,>"] = cmp.mapping.select_prev_item(),
+		["<C-m>"] = cmp.mapping.select_next_item(),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}),

@@ -115,20 +115,41 @@ _G.packer_plugins = {
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["cyberdream.nvim"] = {
+    config = { "\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\16transparent\2\nsetup\15cyberdream\frequire\0" },
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["moonlight.nvim"] = {
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/moonlight.nvim",
+    url = "https://github.com/shaunsingh/moonlight.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-ghost.nvim"] = {
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ghost.nvim",
+    url = "https://github.com/subnut/nvim-ghost.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -139,6 +160,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["oil.nvim"] = {
+    config = { "\27LJ\2\n\v\0\1\1\0\0\0\1L\0\2\0“\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0033\4\6\0=\4\a\3=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\fkeymaps\1\0\1\6q\18actions.close\nfloat\1\0\0\roverride\0\16win_options\1\0\1\rwinblend\3\0\1\0\4\fpadding\3\2\vborder\frounded\15max_height\3(\14max_width\3<\nsetup\boil\frequire\0" },
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -154,10 +192,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: cyberdream.nvim
+time([[Config for cyberdream.nvim]], true)
+try_loadstring("\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\16transparent\2\nsetup\15cyberdream\frequire\0", "config", "cyberdream.nvim")
+time([[Config for cyberdream.nvim]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\1\1\0\0\0\1L\0\2\0“\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0033\4\6\0=\4\a\3=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\fkeymaps\1\0\1\6q\18actions.close\nfloat\1\0\0\roverride\0\16win_options\1\0\1\rwinblend\3\0\1\0\4\fpadding\3\2\vborder\frounded\15max_height\3(\14max_width\3<\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
