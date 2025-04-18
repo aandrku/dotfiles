@@ -1,16 +1,49 @@
+
 --LSP Setups
 local lspconfig = require('lspconfig')
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+--local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
---C/C++ config
-lspconfig.clangd.setup{
-	capabilities = capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+-- c/c++
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.cmake.setup{}
+
+--css config
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.css_variables.setup{}
+
+-- LaTeX
+require'lspconfig'.texlab.setup{
+  cmd = { "texlab" },
+  filetypes = { "tex", "latex", "bibtex", "markdown" },
+  root_dir = require('lspconfig').util.root_pattern("*.tex"),
 }
 
-lspconfig.cmake.setup{}
+--typescript/javascrip config
+require'lspconfig'.ts_ls.setup{}
 
 --go config
-lspconfig.gopls.setup{}
+lspconfig.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})
+
+-- python config
+lspconfig.pyright.setup{}
+
+-- docker config
+lspconfig.dockerls.setup{}
 
 --lua config
 lspconfig.lua_ls.setup {
@@ -38,9 +71,7 @@ lspconfig.lua_ls.setup {
 	}
 }
 
-lspconfig.tsserver.setup{}
 
-lspconfig.tailwindcss.setup{}
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -88,5 +119,4 @@ cmp.setup({
 		{ name = 'buffer' },
 	})
 })
-
 

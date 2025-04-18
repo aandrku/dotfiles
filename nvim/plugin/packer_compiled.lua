@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/aandrku/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/aandrku/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/aandrku/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/aandrku/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/aandrku/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/Users/aandrku/.cache/nvim/packer_hererocks/2.1.1734355927/share/lua/5.1/?.lua;/Users/aandrku/.cache/nvim/packer_hererocks/2.1.1734355927/share/lua/5.1/?/init.lua;/Users/aandrku/.cache/nvim/packer_hererocks/2.1.1734355927/lib/luarocks/rocks-5.1/?.lua;/Users/aandrku/.cache/nvim/packer_hererocks/2.1.1734355927/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/aandrku/.cache/nvim/packer_hererocks/2.1.1734355927/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -77,142 +77,142 @@ _G.packer_plugins = {
   ["Comment.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["autoclose.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
   catppuccin = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/catppuccin",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["cyberdream.nvim"] = {
-    config = { "\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\16transparent\2\nsetup\15cyberdream\frequire\0" },
+    config = { "\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\16transparent\2\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\nsetup\15cyberdream\frequire\0" },
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
     url = "https://github.com/scottmckendry/cyberdream.nvim"
   },
   harpoon = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/harpoon",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["moonlight.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/moonlight.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/moonlight.nvim",
     url = "https://github.com/shaunsingh/moonlight.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-ghost.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ghost.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ghost.nvim",
     url = "https://github.com/subnut/nvim-ghost.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["oil.nvim"] = {
-    config = { "\27LJ\2\n\v\0\1\1\0\0\0\1L\0\2\0“\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0033\4\6\0=\4\a\3=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\fkeymaps\1\0\1\6q\18actions.close\nfloat\1\0\0\roverride\0\16win_options\1\0\1\rwinblend\3\0\1\0\4\fpadding\3\2\vborder\frounded\15max_height\3(\14max_width\3<\nsetup\boil\frequire\0" },
-    loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/oil.nvim",
-    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["smear-cursor.nvim"] = {
+    loaded = true,
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/smear-cursor.nvim",
+    url = "https://github.com/sphamba/smear-cursor.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-be-good"] = {
     loaded = true,
-    path = "/home/aandrku/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/Users/aandrku/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: cyberdream.nvim
-time([[Config for cyberdream.nvim]], true)
-try_loadstring("\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\16transparent\2\nsetup\15cyberdream\frequire\0", "config", "cyberdream.nvim")
-time([[Config for cyberdream.nvim]], false)
--- Config for: oil.nvim
-time([[Config for oil.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\1\1\0\0\0\1L\0\2\0“\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0033\4\6\0=\4\a\3=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\fkeymaps\1\0\1\6q\18actions.close\nfloat\1\0\0\roverride\0\16win_options\1\0\1\rwinblend\3\0\1\0\4\fpadding\3\2\vborder\frounded\15max_height\3(\14max_width\3<\nsetup\boil\frequire\0", "config", "oil.nvim")
-time([[Config for oil.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: cyberdream.nvim
+time([[Config for cyberdream.nvim]], true)
+try_loadstring("\27LJ\2\n√\1\0\0\3\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0'\2\6\0B\0\2\1K\0\1\0\27colorscheme cyberdream\bcmd\bvim\1\0\5\16transparent\2\20terminal_colors\2\25borderless_telescope\2\19hide_fillchars\2\20italic_comments\2\nsetup\15cyberdream\frequire\0", "config", "cyberdream.nvim")
+time([[Config for cyberdream.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

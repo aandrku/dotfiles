@@ -20,69 +20,8 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 16
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+vim.o.foldmethod = 'manual'
+
+vim.g.netrw_longlist = 1
+vim.g.netrw_liststyle = 1
+-- vim.g.netrw_use_lsf = 0

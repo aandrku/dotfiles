@@ -5,8 +5,6 @@ require('packer').startup(function(use)
 	--telescope	
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.6', requires = { {'nvim-lua/plenary.nvim'} } }
 
-	--colorscheme
-	use { "catppuccin/nvim", as = "catppuccin" }
 
 	--treesitter
 	use {
@@ -17,9 +15,18 @@ require('packer').startup(function(use)
 	     end,
 	}
 
+	--LaTeX
+	use {'lervag/vimtex'}
+
+	--tokyo night 
+	use {"catppuccin/nvim", as = "catppuccin"}
+
 	--lsp
 	use { 'neovim/nvim-lspconfig' }
 	use { 'williamboman/mason.nvim' }
+
+	-- smear cursor
+	use { 'sphamba/smear-cursor.nvim' }
 
 	--harpoon
 	use { 'ThePrimeagen/harpoon' }
@@ -44,31 +51,31 @@ require('packer').startup(function(use)
 		end
 	}
 
-	use{
-		"stevearc/oil.nvim",
-		config = function()
-			require("oil").setup({
-				float = {
-					-- Padding around the floating window
-					padding = 2,
-					max_width = 60,
-					max_height = 40,
-					border = "rounded",
-					win_options = {
-						winblend = 0,
-					},
-					-- This is the config that will be passed to nvim_open_win.
-					-- Change values here to customize the layout
-					override = function(conf)
-						return conf
-					end,
-				},
-				keymaps = {
-					["q"] = "actions.close"
-				}
-			})
-		end,
-	}
+	-- use{
+	-- 	"stevearc/oil.nvim",
+	-- 	config = function()
+	-- 		require("oil").setup({
+	-- 			float = {
+	-- 				-- Padding around the floating window
+	-- 				padding = 2,
+	-- 				max_width = 60,
+	-- 				max_height = 40,
+	-- 				border = "rounded",
+	-- 				win_options = {
+	-- 					winblend = 0,
+	-- 				},
+	-- 				-- This is the config that will be passed to nvim_open_win.
+	-- 				-- Change values here to customize the layout
+	-- 				override = function(conf)
+	-- 					return conf
+	-- 				end,
+	-- 			},
+	-- 			keymaps = {
+	-- 				["q"] = "actions.close"
+	-- 			}
+	-- 		})
+	-- 	end,
+	-- }
 
 	use {'ThePrimeagen/vim-be-good'}
 
