@@ -4,7 +4,7 @@ local lspconfig = require('lspconfig')
 --local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 -- c/c++
 require'lspconfig'.clangd.setup{}
@@ -112,11 +112,12 @@ cmp.setup({
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}),
-	sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' }, -- For luasnip users.
-	}, {
-		{ name = 'buffer' },
-	})
+	-- sources = cmp.config.sources({
+	-- 	{ name = 'nvim_lsp' },
+	-- 	{ name = 'luasnip' }, -- For luasnip users.
+	-- }, {
+	-- 	{ name = 'buffer' },
+	-- })
+	sources = cmp.config.sources({{name = 'buffer'}})
 })
 
