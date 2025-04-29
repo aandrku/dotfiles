@@ -10,6 +10,9 @@ capabilities.textDocument.completion.completionItem.snippetSupport = false
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.cmake.setup{}
 
+-- templ
+vim.lsp.enable('templ')
+
 --css config
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
@@ -103,8 +106,8 @@ cmp.setup({
 		end,
 	},
 	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-,>"] = cmp.mapping.select_prev_item(),
@@ -112,12 +115,12 @@ cmp.setup({
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}),
-	-- sources = cmp.config.sources({
-	-- 	{ name = 'nvim_lsp' },
-	-- 	{ name = 'luasnip' }, -- For luasnip users.
-	-- }, {
-	-- 	{ name = 'buffer' },
-	-- })
-	sources = cmp.config.sources({{name = 'buffer'}})
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' }, -- For luasnip users.
+	}, {
+		{ name = 'buffer' },
+	})
+	-- sources = cmp.config.sources({{name = 'buffer'}})
 })
 
