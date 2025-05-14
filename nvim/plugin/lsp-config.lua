@@ -13,6 +13,26 @@ require'lspconfig'.cmake.setup{}
 -- templ
 vim.lsp.enable('templ')
 
+-- tailwind
+-- vim.lsp.enable('tailwindcss')
+lspconfig.tailwindcss.setup({
+  filetypes = { "html", "templ", "css", "javascript", "typescript", "tsx", "jsx" },
+  init_options = {
+    userLanguages = {
+      templ = "html", -- tells Tailwind LSP to treat .templ files as HTML
+    },
+  },
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {
+          { "class\\s*=\\s*\"([^\"]*)\"", 1 },
+        },
+      },
+    },
+  },
+})
+
 --css config
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
