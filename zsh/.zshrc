@@ -80,12 +80,12 @@ plugins=(
 function git_prompt_info1() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
     local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-    echo "%{$fg[yellow]%} $branch%{$reset_color%}"
+    echo "%{$fg[magenta]%} $branch%{$reset_color%}"
   fi
 }
 
-PROMPT='%{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
+PROMPT='%{$fg[cyan]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info1)
+%{$fg[white]%}- %{$reset_color%}'
 
 # git aliases
 alias gs="git status"
