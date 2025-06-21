@@ -3,7 +3,7 @@ require('packer').startup(function(use)
 	use('wbthomason/packer.nvim')
 
 	--telescope	
-	use { 'nvim-telescope/telescope.nvim', tag = '0.1.6', requires = { {'nvim-lua/plenary.nvim'} } }
+	use { 'nvim-telescope/telescope.nvim', tag = '0.1.8', requires = { {'nvim-lua/plenary.nvim'} } }
 
 	-- colorscheme
 	use 'AlexvZyl/nordic.nvim'
@@ -27,6 +27,15 @@ require('packer').startup(function(use)
 
 	--LaTeX
 	use {'lervag/vimtex'}
+
+	--noice
+	use({
+		"folke/noice.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+	})
 
 
 	--lsp
