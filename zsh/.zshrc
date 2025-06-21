@@ -3,6 +3,7 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
 export EDITOR="nvim"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -74,65 +75,32 @@ export EDITOR="nvim"
 plugins=(
 	git
 	zsh-autosuggestions
-	zsh-vi-mode
 	)
 
 function git_prompt_info1() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
-    local branch dirty_icon
-    branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD)
-
-    if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-      # Dirty repo
-      dirty_icon="✗"
-      echo "%{$fg[magenta]%}on %{$fg[yellow]%} $branch %{$fg[red]%}$dirty_icon%{$reset_color%}"
-    else
-      # Clean repo
-      dirty_icon="✔"
-      echo "%{$fg[magenta]%}on %{$fg[yellow]%} $branch %{$fg[green]%}$dirty_icon%{$reset_color%}"
-    fi
+    local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+    echo "%{$fg[yellow]%} $branch%{$reset_color%}"
   fi
 }
 
-
-PROMPT='%{$fg[green]%}[INSERT]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
+PROMPT='%{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
 - '
-function zvm_after_select_vi_mode() {
-  case $ZVM_MODE in
-    $ZVM_MODE_NORMAL)
-      PROMPT='%{$fg[red]%}[NORMAL]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
-      ;;
-    $ZVM_MODE_INSERT)
-      PROMPT='%{$fg[green]%}[INSERT]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
-      ;;
-    $ZVM_MODE_VISUAL)
-      PROMPT='%{$fg[yellow]%}[VISUAL]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
-      ;;
-    $ZVM_MODE_VISUAL_LINE)
-      PROMPT='%{$fg[magenta]%}[VISUAL-LINE]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
-      ;;
-    $ZVM_MODE_REPLACE)
-      PROMPT='%{$fg[blue]%}[REPLACE]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
-      ;;
-  esac
-}
 
 # git aliases
 alias gs="git status"
 
-
-zle -N zvm_after_select_vi_mode
-
 source $ZSH/oh-my-zsh.sh
+
+bindkey -r '^f'  # unbind if taken
+bindkey -s '^f' 'tmux-sessionizer\n'
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/aandrku/go/bin
+export PATH=$PATH:/home/aandrku/.local/scripts
+export PATH="$HOME/sqlcl/sqlcl/bin:$PATH"
+
 
 
 
@@ -163,4 +131,9 @@ export PATH=$PATH:/home/aandrku/go/bin
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ 
+ 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

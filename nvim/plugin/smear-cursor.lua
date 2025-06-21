@@ -5,7 +5,7 @@ require('smear_cursor').setup({
 	gamma = 2.2,
 	-- hide_target_hack = true,
 	-- cursor_color = '#8b34d1',
-	cursor_color = '#ad6df7',
+	cursor_color = '#9da1a6',
 	legacy_computing_symbols_support = true,
 	smear_insert_mode = true,
 })

@@ -16,21 +16,53 @@ vim.lsp.enable('templ')
 -- tailwind
 -- vim.lsp.enable('tailwindcss')
 lspconfig.tailwindcss.setup({
-  filetypes = { "html", "templ", "css", "javascript", "typescript", "tsx", "jsx" },
-  init_options = {
-    userLanguages = {
-      templ = "html", -- tells Tailwind LSP to treat .templ files as HTML
+    filetypes = {
+        "html",
+        "templ",
+        "css",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "tsx",
+        "jsx",
     },
-  },
-  settings = {
-    tailwindCSS = {
-      experimental = {
-        classRegex = {
-          { "class\\s*=\\s*\"([^\"]*)\"", 1 },
+    init_options = {
+        userLanguages = {
+            templ = "html",
         },
-      },
     },
-  },
+    settings = {
+        tailwindCSS = {
+            experimental = {
+                classRegex = {
+                    -- HTML: class="..." and class='...'
+                    { [[class\s*=\s*"([^"]*)"]], 1 },
+                    { [[class\s*=\s*'([^']*)']], 1 },
+
+                    -- JSX: className="..." and className='...'
+                    { [[className\s*=\s*"([^"]*)"]], 1 },
+                    { [[className\s*=\s*'([^']*)']], 1 },
+
+                    -- JSX: className={`...`}
+                    { [[className\s*=\s*{\s*`([^`]*)`}]], 1 },
+
+                    -- tw="..." and tw='...'
+                    { [[tw\s*=\s*"([^"]*)"]], 1 },
+                    { [[tw\s*=\s*'([^']*)']], 1 },
+
+                    -- tw={`...`}
+                    { [[tw\s*=\s*{\s*`([^`]*)`}]], 1 },
+                },
+            },
+        },
+    },
+})
+-- htmx
+lspconfig.htmx.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html", "templ" },
 })
 
 --css config
