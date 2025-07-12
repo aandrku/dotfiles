@@ -20,6 +20,7 @@ lspconfig.tailwindcss.setup({
         "html",
         "templ",
         "css",
+		"tmpl",
         "javascript",
         "javascriptreact",
         "typescript",
@@ -62,7 +63,7 @@ lspconfig.tailwindcss.setup({
 lspconfig.htmx.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "html", "templ" },
+    filetypes = { "html", "templ", "tmpl" },
 })
 
 --css config
