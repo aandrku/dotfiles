@@ -13,7 +13,7 @@ default_border none
 default_floating_border none
 
 # Set wallpaper (Wayland-native)
-exec_always swaybg -i ~/Pictures/wallpapers/my_wallpaper.png --mode fill
+exec_always swaybg -i ~/Pictures/wallpapers/wall1.jpg --mode fill
 exec_always waybar
 
 # Status bar

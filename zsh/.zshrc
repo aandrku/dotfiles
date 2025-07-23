@@ -77,21 +77,19 @@ plugins=(
 	zsh-autosuggestions
 	)
 
-<<<<<<< HEAD
 function git_prompt_info1() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
     local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
     echo "%{$fg[magenta]%} $branch%{$reset_color%}"
   fi
 }
-=======
+
 autoload -Uz colors && colors
 
 setopt PROMPT_SUBST
 
 PROMPT='%{$fg_bold[green]%}➜ %{$fg[cyan]%}%n%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%} '
 
->>>>>>> a4663b7575790e0c392776ec71fd24c42b0de3f7
 
 
 source $ZSH/oh-my-zsh.sh
@@ -130,6 +128,8 @@ export PATH="$HOME/sqlcl/sqlcl/bin:$PATH"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+#
+alias gs="git status"
  
  
 
