@@ -1,4 +1,7 @@
 
+-- zig
+vim.lsp.enable('zls')
+
 --LSP Setups
 local lspconfig = require('lspconfig')
 --local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -12,6 +15,9 @@ require'lspconfig'.cmake.setup{}
 
 -- templ
 vim.lsp.enable('templ')
+
+-- lsp
+vim.lsp.enable('sqlls')
 
 -- tailwind
 -- vim.lsp.enable('tailwindcss')
