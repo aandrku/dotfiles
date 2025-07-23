@@ -77,18 +77,22 @@ plugins=(
 	zsh-autosuggestions
 	)
 
+<<<<<<< HEAD
 function git_prompt_info1() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
     local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
     echo "%{$fg[magenta]%} $branch%{$reset_color%}"
   fi
 }
+=======
+autoload -Uz colors && colors
 
-PROMPT='%{$fg[cyan]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info1)
-%{$fg[white]%}- %{$reset_color%}'
+setopt PROMPT_SUBST
 
-# git aliases
-alias gs="git status"
+PROMPT='%{$fg_bold[green]%}➜ %{$fg[cyan]%}%n%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%} '
+
+>>>>>>> a4663b7575790e0c392776ec71fd24c42b0de3f7
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,12 +115,7 @@ export PATH="$HOME/sqlcl/sqlcl/bin:$PATH"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+  export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
