@@ -76,26 +76,14 @@ plugins=(
 	zsh-vi-mode
 	)
 
-function git_prompt_info1() {
-  if git rev-parse --is-inside-work-tree &>/dev/null; then
-    local branch dirty_icon
-    branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD)
+autoload -Uz colors && colors
 
-    if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-      # Dirty repo
-      dirty_icon="✗"
-      echo "%{$fg[magenta]%}on %{$fg[yellow]%} $branch %{$fg[red]%}$dirty_icon%{$reset_color%}"
-    else
-      # Clean repo
-      dirty_icon="✔"
-      echo "%{$fg[magenta]%}on %{$fg[yellow]%} $branch %{$fg[green]%}$dirty_icon%{$reset_color%}"
-    fi
-  fi
-}
+setopt PROMPT_SUBST
+
+PROMPT='%{$fg_bold[green]%}➜ %{$fg[cyan]%}%n%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%} '
 
 
-PROMPT='%{$fg[green]%}[INSERT]%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[white]%}in%{$reset_color%} %{$fg[red]%}%~%{$reset_color%} $(git_prompt_info1)
-- '
+
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
@@ -137,12 +125,7 @@ export PATH=$PATH:/home/aandrku/go/bin
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+  export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
