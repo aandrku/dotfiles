@@ -1,4 +1,8 @@
 
+link/tmux:
+	rm -rf $(HOME)/.tmux.conf
+	ln -s $(CURDIR)/.tmux.conf $(HOME)/.tmux.conf
+	
 link/ghostty:
 	mkdir -p $(HOME)/.config/ghostty
 	rm -rf $(HOME)/.config/ghostty/config
