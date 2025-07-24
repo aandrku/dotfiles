@@ -18,3 +18,8 @@ link/nvim:
 	mkdir -p $(HOME)/.config/nvim
 	rm -rf $(HOME)/.config/nvim
 	ln -s $(CURDIR)/nvim $(HOME)/.config/nvim
+	
+link/waybar:
+	mkdir -p $(HOME)/.config/waybar
+	rm -rf $(HOME)/.config/waybar
+	ln -s $(CURDIR)/waybar $(HOME)/.config/waybar
