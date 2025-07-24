@@ -8,6 +8,11 @@ link/ghostty:
 	rm -rf $(HOME)/.config/ghostty/config
 	ln -s $(CURDIR)/ghostty/config $(HOME)/.config/ghostty/config
 
+link/sway:
+	mkdir -p $(HOME)/.config/sway
+	rm -rf $(HOME)/.config/sway/config
+	ln -s $(CURDIR)/sway/config $(HOME)/.config/sway/config
+
 
 link/nvim:
 	mkdir -p $(HOME)/.config/nvim
