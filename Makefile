@@ -18,6 +18,21 @@ link/nvim:
 	mkdir -p $(HOME)/.config/nvim
 	rm -rf $(HOME)/.config/nvim
 	ln -s $(CURDIR)/nvim $(HOME)/.config/nvim
+
+link/i3:
+	mkdir -p $(HOME)/.config/i3
+	rm -rf $(HOME)/.config/i3
+	ln -s $(CURDIR)/i3 $(HOME)/.config/i3
+
+link/picom:
+	mkdir -p $(HOME)/.config/picom
+	rm -rf $(HOME)/.config/picom
+	ln -s $(CURDIR)/picom $(HOME)/.config/picom
+	
+link/polybar:
+	mkdir -p $(HOME)/.config/polybar
+	rm -rf $(HOME)/.config/polybar
+	ln -s $(CURDIR)/polybar $(HOME)/.config/polybar
 	
 link/waybar:
 	mkdir -p $(HOME)/.config/waybar
