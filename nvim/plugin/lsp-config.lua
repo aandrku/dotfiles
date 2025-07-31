@@ -2,16 +2,11 @@
 -- zig
 vim.lsp.enable('zls')
 
---LSP Setups
+-- LSP Setups
 local lspconfig = require('lspconfig')
---local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false
-
--- c/c++
-require'lspconfig'.clangd.setup{}
-require'lspconfig'.cmake.setup{}
 
 -- templ
 vim.lsp.enable('templ')
@@ -20,8 +15,7 @@ vim.lsp.enable('templ')
 vim.lsp.enable('sqlls')
 
 -- tailwind
--- vim.lsp.enable('tailwindcss')
-lspconfig.tailwindcss.setup({
+vim.lsp.config["tailwindcss"] = {
     filetypes = {
         "html",
         "templ",
@@ -64,7 +58,10 @@ lspconfig.tailwindcss.setup({
             },
         },
     },
-})
+}
+
+vim.lsp.enable('tailwindcss')
+
 -- htmx
 lspconfig.htmx.setup({
     on_attach = on_attach,
