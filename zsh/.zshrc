@@ -101,6 +101,8 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/aandrku/go/bin
 export PATH=$PATH:/home/aandrku/.local/scripts
+export PATH=$PATH:/home/aandrku/.cargo/bin
+export PATH=$PATH:/home/aandrku/.local/bin
 export PATH="$HOME/sqlcl/sqlcl/bin:$PATH"
 
 
