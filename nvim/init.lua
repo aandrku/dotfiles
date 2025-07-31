@@ -12,7 +12,7 @@ vim.o.wrap = false          -- do not wrap lines
 vim.o.winborder = 'single'  -- use single borders for windows
 
 -- non plugin keymaps
-vim.keymap.set('n', '<leader>fe', function() vim.cmd('Ex') end)
+vim.keymap.set('n', '<leader>fe', ":Oil<CR>")
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 
@@ -46,6 +46,17 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			build = nil,
 			branch = 'master',
+			lazy = false,
+		},
+		{
+			'stevearc/oil.nvim',
+			---@module 'oil'
+			---@type oil.SetupOpts
+			opts = {},
+			-- Optional dependencies
+			dependencies = { { "echasnovski/mini.icons", opts = {} } },
+			-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+			-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 			lazy = false,
 		},
 		{
@@ -126,11 +137,19 @@ vim.keymap.set('n', '<leader>ff', ':Pick files<CR>')
 -- mini status line
 require('mini.statusline').setup()
 
+-- oil nvim
+require("oil").setup()
 
 -- setup LSPs
 -- Lua
 vim.lsp.config['lua_ls'] = require("lsp.configs.lua")
 vim.lsp.enable("lua_ls")
+
+-- tailwindcss
+vim.lsp.enable("tailwindcss")
+
+-- templ
+vim.lsp.enable("templ")
 
 -- Go
 vim.lsp.enable("gopls")
