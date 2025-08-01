@@ -17,7 +17,6 @@ vim.keymap.set('n', '<leader>fe', ":Oil<CR>")
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -125,6 +124,7 @@ require("lazy").setup({
 })
 
 
+
 -- setup colorscheme
 local vague = require("vague")
 vague.setup({
@@ -146,6 +146,7 @@ require("oil").setup()
 
 -- setup LSPs
 -- Lua
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 vim.lsp.config['lua_ls'] = require("lsp.configs.lua")
 vim.lsp.enable("lua_ls")
 
@@ -156,6 +157,9 @@ vim.lsp.enable("tailwindcss")
 vim.lsp.enable("templ")
 
 -- Go
+vim.lsp.config['gopls'] = {
+	capabilities = capabilities
+}
 vim.lsp.enable("gopls")
 
 local ts = require("nvim-treesitter.configs")
