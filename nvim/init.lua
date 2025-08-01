@@ -137,6 +137,8 @@ vim.cmd("colorscheme vague")
 local mini_pick = require("mini.pick")
 mini_pick.setup()
 vim.keymap.set('n', '<leader>ff', ':Pick files<CR>')
+vim.keymap.set('n', '<leader>fh', ':Pick help<CR>')
+vim.keymap.set('n', '<leader>fg', ':Pick grep live<CR>')
 
 -- mini status line
 require('mini.statusline').setup()
