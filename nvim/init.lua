@@ -10,6 +10,7 @@ vim.o.incsearch = true      -- highlight matches when searching with /
 vim.o.scrolloff = 16        -- keep at least 16 lines above and below cursor when scrolling
 vim.o.wrap = false          -- do not wrap lines
 vim.o.winborder = 'single'  -- use single borders for windows
+vim.o.clipboard = "unnamedplus"
 
 -- non plugin keymaps
 vim.keymap.set('n', '<leader>fe', ":Oil<CR>")
@@ -44,7 +45,6 @@ require("lazy").setup({
 		{ "echasnovski/mini.nvim" },
 		{
 			"nvim-treesitter/nvim-treesitter",
-			build = nil,
 			branch = 'master',
 			lazy = false,
 		},
