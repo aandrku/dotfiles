@@ -31,23 +31,13 @@ vim.keymap.set('n', '<leader>ff', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>fh', ':Pick help<CR>')
 vim.keymap.set('n', '<leader>fg', ':Pick grep live<CR>')
 
--- setup LSPs
--- Lua
-local capabilities = require("blink.cmp").get_lsp_capabilities()
-vim.lsp.config['lua_ls'] = require("lsp.configs.lua")
-vim.lsp.enable("lua_ls")
-
--- tailwindcss
-vim.lsp.enable("tailwindcss")
-
--- templ
-vim.lsp.enable("templ")
-
--- Go
-vim.lsp.config['gopls'] = {
-	capabilities = capabilities
-}
-vim.lsp.enable("gopls")
+-- highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("HighlightOnYank", {clear = true}),
+	callback = function ()
+		vim.highlight.on_yank()
+	end
+})
 
 -- gofmt
 require("gofmt")
