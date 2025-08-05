@@ -13,6 +13,7 @@ vim.o.winborder = 'single'      -- use single borders for windows
 vim.o.clipboard = "unnamedplus" -- use system clipboard when yanking and pasting
 vim.o.signcolumn = 'yes:1'
 
+vim.filetype.add({ extension = { templ = "templ" } })
 -- plugins
 require("config.lazy")
 vim.cmd("colorscheme vague")
