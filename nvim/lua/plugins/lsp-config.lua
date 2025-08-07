@@ -13,6 +13,14 @@ return {
     -- templ
     vim.lsp.enable("templ")
 
+    -- tinymist
+    vim.lsp.config["tinymist"] = {
+      cmd = { "tinymist" },
+      filetypes = { "typst" },
+      settings = { }
+    }
+    vim.lsp.enable("tinymist")
+
     -- rust
     vim.lsp.config['rust-analyzer'] = {
       cmd = { "rust-analyzer" },
