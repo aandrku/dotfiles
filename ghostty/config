@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 font-family = ""
-# font-family = "Ubuntu Mono"
+font-family = "RecMonoCasual Nerd Font"
 font-size = 24
 
 theme = flexoki-dark
