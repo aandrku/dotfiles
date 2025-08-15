@@ -10,6 +10,9 @@ return {
     -- tailwindcss
     vim.lsp.enable("tailwindcss")
 
+    vim.lsp.enable("pyright")
+    vim.lsp.enable("ts_ls")
+
     -- templ
     vim.lsp.enable("templ")
 

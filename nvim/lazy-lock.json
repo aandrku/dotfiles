@@ -5,10 +5,10 @@
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mason.nvim": { "branch": "main", "commit": "7dc4facca9702f95353d5a1f87daf23d78e31c2a" },
   "mini.icons": { "branch": "main", "commit": "b8f6fa6f5a3fd0c56936252edcd691184e5aac0c" },
-  "mini.nvim": { "branch": "main", "commit": "0e9d1f972a91acf5a0513319099ba41f7c09c30a" },
-  "nvim-lspconfig": { "branch": "master", "commit": "45ff1914044de7dbd4cd85053dc09f47312a2f4d" },
+  "mini.nvim": { "branch": "main", "commit": "9909241424d305ef8f64d0d4697b45b59d1238ea" },
+  "nvim-lspconfig": { "branch": "master", "commit": "b0caeef0d835fbe19df6ad71dbc4345eaaea649c" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "oil.nvim": { "branch": "master", "commit": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc" },
-  "smear-cursor.nvim": { "branch": "main", "commit": "58e69a911e7f5296b3d7fec5e7414df5a4ac91fb" },
-  "vague.nvim": { "branch": "main", "commit": "676e5b4d74f32ff91c1583eba9c326d2b749672f" }
+  "smear-cursor.nvim": { "branch": "main", "commit": "12a70b24438ce246579a5a45d3b77c03b47f9359" },
+  "vague.nvim": { "branch": "main", "commit": "087ff41d1b4d90e7b64e1c97860700fa6b7f0daf" }
 }

@@ -44,6 +44,7 @@
 
 font-family = ""
 # font-family = "Ubuntu Mono"
+font-size = 24
 
 theme = flexoki-dark
 background-opacity = 1
