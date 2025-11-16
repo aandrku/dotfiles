@@ -42,6 +42,11 @@ return {
     }
     vim.lsp.enable("rust-analyzer")
 
+    vim.lsp.enable('jdtls')
+    vim.lsp.config['jdtls'] = {
+
+    }
+
     -- Go
     vim.lsp.config['gopls'] = {
       capabilities = capabilities
